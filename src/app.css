@@ -1,5 +1,6 @@
-/*@import url("styles/colors.css");
-*/
+@import url("./components/styles.module.css");
+
+
 *,
 *:after,
 *:before {
@@ -11,7 +12,7 @@
 }
 
 body {
-  color: var(--dark);
+  color: #fff;
   font-weight: lighter;
   font: 400 15px/22px 'Open Sans', 'Helvetica Neue', Sans-serif;
   font-smoothing: antialiased;

@@ -6,20 +6,21 @@ import Train from './Train';
 export class Admin extends React.Component {
 
   render() {
-    const { trains, updateTrains } = this.props;
+    const { trains, updateTrains, authStatus} = this.props;
 
     return (
       <div id="wrapper">
         <h2>Manage Trains:</h2>
         <div className={styles.flexContainer}>
-          {trains.map(train =>
-            <Train
+          {trains.map(train => {
+          return  <Train
               key={train.id}
               {...train}
               updateTrains={updateTrains}
               canEdit={true}
+              token={authStatus.token}
             />
-          )}
+          })}
         </div>
       </div>
     )
